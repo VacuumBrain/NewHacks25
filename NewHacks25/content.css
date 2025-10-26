@@ -1,0 +1,43 @@
+/* content.css */
+/* Load Roboto via <link> injection from JS (safer than @import in MV3) */
+/* Fallback: system sans-serif */
+
+#food-overlay {
+    bottom: 12px;
+    left: 12px;
+    top: auto;
+    right: auto;
+    background: white;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    border-radius: 15px;
+    padding: 15px;
+    z-index: 2147483647; /* stay on top of Maps */
+    font-family: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: #111;
+    display: none; /* your JS toggles this on render */
+}
+
+#food-overlay h2 {
+    margin: 0 0 8px;
+    font-size: 18px;
+}
+
+#food-overlay button {
+    margin-top: 10px;
+    padding: 6px 12px;
+    border: none;
+    background: #4285F4;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Optional: tidy the inline bits your JS injects */
+#food-overlay .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    align-items: center;
+}
+#food-overlay .muted { opacity: .85; font-size: 13px; }
+#food-overlay .small { font-size: 12px; color: #555; }

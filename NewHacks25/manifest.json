@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Tourist Trap Rater",
+  "version": "1.0.0",
+  "description": "Shows possible tourist traps",
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": ["storage", "scripting", "activeTab"],
+  "host_permissions": ["http://localhost:8080/*"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "Tourist Trap Rater"
+  }
+}
